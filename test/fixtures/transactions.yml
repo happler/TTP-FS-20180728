@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: transactions
+#
+#  id         :bigint(8)        not null, primary key
+#  ticker     :string           not null
+#  price      :float            not null
+#  quantity   :integer          not null
+#  buyer_id   :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticker: MyString
+  price: 1.5
+  quantity: 
+  buyer: 1
+
+two:
+  ticker: MyString
+  price: 1.5
+  quantity: 
+  buyer: 1
