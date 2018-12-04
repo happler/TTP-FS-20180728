@@ -24,4 +24,8 @@ class User < ApplicationRecord
 
   has_many :stocks,
     foreign_key: :buyer_id
+
+    def enough_funds?(price, quantity)
+      return (quantity * price) <= self.funds
+  end
 end
