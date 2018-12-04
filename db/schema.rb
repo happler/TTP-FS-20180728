@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 2018_12_03_234858) do
   enable_extension "plpgsql"
 
   create_table "stocks", force: :cascade do |t|
-    t.string "ticker"
-    t.integer "quantity"
-    t.integer "buyer_id"
+    t.string "ticker", null: false
+    t.integer "quantity", default: 0, null: false
+    t.integer "buyer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["buyer_id"], name: "index_stocks_on_buyer_id"
